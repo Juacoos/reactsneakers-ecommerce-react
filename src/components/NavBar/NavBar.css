@@ -1,7 +1,7 @@
 .nav{
     display: flex;
     justify-content: space-around;
-    background-color: #6c757d;
+    background-color: rgb(224, 224, 224);
     min-height: 60px;
 }
 .logo{

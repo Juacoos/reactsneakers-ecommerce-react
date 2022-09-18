@@ -1,4 +1,5 @@
 
+import ButtonCard from './ButtonCard';
 import './Card.css';
 
 export default function Card(props){    
@@ -11,6 +12,7 @@ export default function Card(props){
             height={200}/>
           <p>{props.detail}</p>
           <h4>Precio ${props.precio}</h4>
+          <ButtonCard />
       </div>
     )
 }

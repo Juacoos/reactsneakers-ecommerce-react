@@ -1,0 +1,29 @@
+.container-btn{
+  margin: 10px 0;
+}
+.btn{
+  padding: 3px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid white;
+  transition: all 0.09s;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: rgb(224, 224, 224);
+  border: 1px solid rgb(224, 224, 224);
+
+}
+.btn-comprar{
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.btn-comprar:hover{
+  background-color: #00bbf9;
+  border: 1px solid #00bbf9;
+  color: black;
+  transition: all 0.09s;
+}
