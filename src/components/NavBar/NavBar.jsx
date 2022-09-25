@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../images/logo.png';
+import { DiReact } from 'react-icons/di';
 import ButtonNav from './ButtonNav';
 import CartWidget from './CartWidget';
 import './NavBar.css';
@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <nav className='nav'>
       <div className='logo'>
-        <a href="#"><img src={logo} style={{width:50}} className='logo' alt='logo'/></a>
+        <a href="/" className='logoLink'><DiReact size={50}/>ReactSneakers</a>
       </div>
       <div className='nav-buttons'>
         <ul className='nav-lista'>

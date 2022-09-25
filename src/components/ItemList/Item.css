@@ -1,0 +1,38 @@
+.card{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 30px;
+  width: 280px;
+  border-radius: 5px;
+  border: 1px solid white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+
+}
+
+.card:hover{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+
+}
+
+.imgContainer{
+  border-bottom: 1px solid lightgray;
+  overflow: hidden;
+}
+.imgProd{
+  width: 100%;
+  height: 100%;
+  transition: all 300ms;
+}
+
+.imgProd:hover{
+  transform: scale(1.1);
+}
+
+@media (max-width: 720px){
+  .card{
+    width: 230px;
+  }
+}

@@ -1,0 +1,28 @@
+.countContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  min-width: 200px;
+  margin: 5px 0;
+  border-radius: 2px;
+  background-color: white;
+}
+.countContainer:hover{
+  background-color: lightgrey;
+}
+.restaBtn{
+  height: 100%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.sumaBtn{
+  height: 100%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}

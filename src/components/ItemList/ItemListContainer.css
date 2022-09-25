@@ -5,7 +5,47 @@
   text-align: center;
 }
 .productos{
-  display: flex;
+  /*  display: flex;
   justify-content: center;
-  margin: 10px;
+  margin: 10px; */
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+}
+.contador{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width:1030px){
+  .productos{
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+  }
+}
+@media (max-width:720px){
+  .productos{
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 0px;
+    padding: 40px;
+    justify-content: center;
+    }
+}
+
+
+@media (max-width:610px){
+  .productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
