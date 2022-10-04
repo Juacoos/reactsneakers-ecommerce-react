@@ -1,28 +1,30 @@
-.container-btn{
+.containerButtonsDetail{
+  display: flex;
+  flex-direction: column;
   margin: 10px 0;
 }
-.btn{
-  padding: 3px;
-  margin: 5px;
-  border-radius: 5px;
+.btnDetails{
+
+  padding: 6px;
+  margin: 8px;
+  border-radius: 2px;
   background-color: white;
   border: 1px solid white;
   transition: all 0.09s;
   cursor: pointer;
 }
 
-.btn:hover{
+.btnDetails:hover{
   background-color: rgb(224, 224, 224);
   border: 1px solid rgb(224, 224, 224);
 
 }
-.btn-details{
-  width: 50%;
+.btnComprar{
   background-color: black;
   color: white;
   border: 1px solid black;
 }
-.btn-details:hover{
+.btnComprar:hover{
   background-color: #00bbf9;
   border: 1px solid #00bbf9;
   color: black;

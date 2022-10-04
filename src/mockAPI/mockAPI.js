@@ -6,7 +6,7 @@ const data = [
     price: 45,
     detail: "Zapatillas Adidas Running",
     stock: 10,
-    category: "running"
+    category: "deportivo"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const data = [
     price: 65,
     detail: "Zapatillas Nike Air Force 1 Black",
     stock: 9,
-    category: "street"
+    category: "urbano"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const data = [
     price: 95,
     detail: "Nike Air Force 1 '07 SN",
     stock: 3,
-    category: "street"
+    category: "urbano"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const data = [
     price: 139,
     detail: "Nike Dunk High Retro",
     stock: 10,
-    category: "sb"
+    category: "urbano"
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const data = [
     price: 129,
     detail: "Nike Air Max Plus",
     stock: 10,
-    category: "air"
+    category: "urbano"
   },
   {
     id: 6,
@@ -51,14 +51,40 @@ const data = [
     price: 110,
     detail: "Adidas Forum Low",
     stock: 10,
-    category: "casual"
+    category: "urbano"
   },
 ]
 
+
+/* Funcion que lleva todos los productos a ItemList */
 export function getData(){
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(data)
     }, 2000);
+  })
+}
+
+
+/* Funcion que lleva un solo producto a ItemDetail */
+export function getProducto(idParam){
+  return new Promise((resolve) => {
+    let productoRequest = data.find((item) =>{
+      return item.id === Number(idParam)
+    })
+    setTimeout(() => {
+      resolve(productoRequest)
+    }, 2000);
+  })
+}
+
+export function getProductByCategory(categoryIDParam){
+  return new Promise((resolve) =>{
+    let productosCategory = data.filter((item) =>{
+      return item.category === categoryIDParam
+    })
+    setTimeout(() => {
+      resolve(productosCategory)
+    }, 200);
   })
 }

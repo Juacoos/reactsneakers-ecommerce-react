@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function ButtonNav(props) {
   return (
-    <li className='nav-pags'><a href={props.direccion}>{props.nombreNav}</a></li>
+    <li className='nav-pags'>
+      <Link to={props.direccion}>{props.nombreNav}</Link>
+    </li>
   )
 }
 

@@ -3,12 +3,11 @@ import {FaShoppingCart} from 'react-icons/fa';
 
 function CartWidget() {
   return (
-    <div>
+    <div className='cart'>
       <a href="#">
-        <FaShoppingCart />
+        <FaShoppingCart size={25} />
       </a>
     </div>
   )
 }
-
 export default CartWidget

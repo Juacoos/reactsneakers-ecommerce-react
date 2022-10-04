@@ -7,13 +7,9 @@ function ButtonCard() {
   return (
     <div className='container-btn'>
       <button 
-        className='btn btn-comprar'>
-        Comprar
+        className='btn btn-details'>
+        Ver detalles
       </button>
-      <button className='btn'>
-        Agregar al carrito
-      </button>
-      <ItemCount stock={10} initial={1}/>
     </div>
   )
 }
