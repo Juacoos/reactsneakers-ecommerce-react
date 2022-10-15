@@ -6,7 +6,7 @@ import Item from './Item';
 import ItemDetail from './ItemDetail';
 import './ItemDetailContainer.css';
 
-function ItemDetailContainer() {
+function ItemDetailContainer(props) {
 
   const [item, setItem] = useState([]);
 
@@ -20,12 +20,7 @@ function ItemDetailContainer() {
 
   return (
     <div className='itemDetailContainer'>
-      <ItemDetail 
-        title={item.title}
-        srcImg={item.img}
-        detail={item.detail}
-        price={item.price}
-        />
+      <ItemDetail item={item}/>
     </div>
   )
 }
