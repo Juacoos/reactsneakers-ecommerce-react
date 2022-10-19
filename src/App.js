@@ -5,6 +5,7 @@ import ItemListContainer from './components/ItemList/ItemListContainer';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import ItemDetailContainer from './components/ItemList/ItemDetailContainer';
 import { CartContextProvider } from './context/cartContext';
+import CartView from './components/CartView/CartView';
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
               
               <Route 
                 path='/cart' 
-                element={<h1>Carrito</h1>} />
+                element={<CartView/>} />
               
               <Route path="*" element={<h4>Error 404 xdn't</h4>}/>
 

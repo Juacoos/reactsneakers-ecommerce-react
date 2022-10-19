@@ -7,17 +7,19 @@ function CartWidget() {
 
   // const cart = useContext(cartContext).cart;
   // == 
-  const { cart } = useContext(cartContext);
 
   const {getTotalItemCount} = useContext(cartContext);
 
-  console.log(cart);
 
   return (
     <div className='cart'>
       <Link to="/cart">
         <FaShoppingCart size={25} />
-        <span> {getTotalItemCount()}</span>
+        <span> 
+          {
+            getTotalItemCount() > 0 && getTotalItemCount()
+          }
+        </span>
       </Link>
     </div>
   )

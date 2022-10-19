@@ -21,7 +21,7 @@ export default function Item(props){
 
             <h2>{props.title}</h2>
             <p>{props.detail}</p>
-            <h4>${props.precio}</h4>
+            <h4>{props.offer && <span className='offer'>Oferta! </span>}${props.precio}</h4>
             <Link to={`/producto/${props.id}`}>
 
               <ButtonCard/>

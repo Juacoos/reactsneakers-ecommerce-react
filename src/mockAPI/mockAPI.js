@@ -6,7 +6,8 @@ const data = [
     price: 45,
     detail: "Zapatillas Adidas Running",
     stock: 10,
-    category: "deportivo"
+    category: "deportivo",
+    offer: true
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ const data = [
     price: 65,
     detail: "Zapatillas Nike Air Force 1 Black",
     stock: 9,
-    category: "urbano"
+    category: "urbano",
+    offer: true
   },
   {
     id: 3,
@@ -68,13 +70,18 @@ export function getData(){
 
 /* Funcion que lleva un solo producto a ItemDetail */
 export function getProducto(idParam){
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     let productoRequest = data.find((item) =>{
       return item.id === Number(idParam)
     })
     setTimeout(() => {
-      resolve(productoRequest)
-    }, 2000);
+      if(productoRequest === undefined){
+        reject(new Error("No se encuentra el producto"))
+      }
+      else{
+        resolve(productoRequest)
+      }
+    }, 1000);
   })
 }
 

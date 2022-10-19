@@ -8,20 +8,32 @@ import './ItemDetailContainer.css';
 
 function ItemDetailContainer(props) {
 
-  const [item, setItem] = useState([]);
+  const [item, setItem] = useState({});
+  const [feedbackMsg, setFeedbackMsg] = useState(null);
 
   const { itemID } = useParams();
 
   useEffect(() => {
-    getProducto(itemID).then( (data) =>{
+    getProducto(itemID)
+    .then( (data) =>{
       setItem(data);
-    });
+    })
+    .catch( (error) =>{
+      setFeedbackMsg(error.message);
+    })
   }, [])
 
   return (
-    <div className='itemDetailContainer'>
-      <ItemDetail item={item}/>
-    </div>
+    <>
+    { feedbackMsg 
+      ? 
+      <h4>Error: {feedbackMsg}</h4>
+      :
+      <div className='itemDetailContainer'>
+        <ItemDetail item={item}/>
+      </div>
+    }
+    </>
   )
 }
 

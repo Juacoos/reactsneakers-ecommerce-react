@@ -6,6 +6,7 @@ import {DiReact} from "react-icons/di";
 import './NavBar.css';
 import ButtonNav from './ButtonNav';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
 
@@ -21,7 +22,7 @@ function NavBar() {
 
         {/* Logo */}
         <div className='container-logo'>
-          <a href="/" className='logoLink'><DiReact size={50}/>ReactSneakers</a>
+          <Link to="/" className='logoLink'><DiReact size={50}/>ReactSneakers</Link>
         </div>
 
         <div onClick={handleClick} className='boton-nav' >

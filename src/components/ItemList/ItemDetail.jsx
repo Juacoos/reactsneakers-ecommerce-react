@@ -5,22 +5,26 @@ import ItemCount from './ItemCount';
 import './ItemDetail.css';
 import './Button.css';
 import { Link } from 'react-router-dom';
-
 import { cartContext } from '../../context/cartContext';
+import Loader from '../Loader/Loader';
 
 
 function ItemDetail({ item }) {
 
   const [count, setCount] = useState(0);
 
-  const {addToCart, removeItem} = useContext(cartContext);
+  const {addToCart, removeItem } = useContext(cartContext);
 
   function onAddToCart(count) {
-    console.log("Agregaste items al carrito:", item, count);
-    addToCart(item, count)
-    setCount(count);
-  }
 
+      console.log("Agregaste items al carrito:", item, count);
+      addToCart(item, count)
+      setCount(count);
+
+  }
+  
+
+  if( item.title )
   return (
     <div className='itemDetail'>
 
@@ -35,7 +39,6 @@ function ItemDetail({ item }) {
           <h1 className='titleDetail'>{item.title}</h1>
           <h2 className='priceDetail'>$ {item.price}</h2>
         </div>
-        
         
         <div className={'containerButtonsDetail'}>
           <p className='details'>{item.detail}</p>
@@ -52,10 +55,10 @@ function ItemDetail({ item }) {
           <button onClick={() => removeItem(item.id)}>Eliminar</button>
         </div>
 
-
       </div>
     </div>
   )
+  return <Loader/>
 }
 
 export default ItemDetail
