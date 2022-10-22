@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { getProducto} from '../../mockAPI/mockAPI';
+import { getProducto} from '../../services/firebase';
 import Item from './Item';
 import ItemDetail from './ItemDetail';
 import './ItemDetailContainer.css';

@@ -6,8 +6,11 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import ItemDetailContainer from './components/ItemList/ItemDetailContainer';
 import { CartContextProvider } from './context/cartContext';
 import CartView from './components/CartView/CartView';
+import FirebaseApp from './services/firebase';
+
 
 function App() {
+  console.log(FirebaseApp)
   return (
     <div className="App">
       <CartContextProvider>
