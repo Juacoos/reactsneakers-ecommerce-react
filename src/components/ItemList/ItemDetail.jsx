@@ -1,19 +1,20 @@
 import React, { useState, useContext } from 'react'
-import ButtonCard from './ButtonCard';
 import Button from './Button';
 import ItemCount from './ItemCount';
 import './ItemDetail.css';
 import './Button.css';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { cartContext } from '../../context/cartContext';
 import Loader from '../Loader/Loader';
 
 
+
 function ItemDetail({ item }) {
+  const { itemID } = useParams();
 
   const [count, setCount] = useState(0);
 
-  const {addToCart, removeItem } = useContext(cartContext);
+  const {addToCart, removeItem, isInCart } = useContext(cartContext);
 
   function onAddToCart(count) {
 
@@ -44,15 +45,21 @@ function ItemDetail({ item }) {
           <p className='details'>{item.detail}</p>
 
           {/* Contador y Boton para A. al carrito. Cuando hay items, aparece botón para ver el carrito. */}
-          { count === 0 ?
+          
+          { !isInCart(itemID) ?
           <ItemCount 
-            onAddToCart={onAddToCart}
-            text={"Agregar al carrito"}
-            initial={1} 
-            stock={10}
-            /> 
-            : <Button claseBtn={"btnDetails"}><Link to={"/cart"}>Ver carrito</Link></Button>}
-          <button onClick={() => removeItem(item.id)}>Eliminar</button>
+          onAddToCart={onAddToCart}
+          text={"Agregar al carrito"}
+          initial={1} 
+          stock={10}
+          /> 
+          : 
+          <>
+          <h5 className='details'>El producto fue agregado al carrito!</h5>
+          <Button claseBtn={"btnDetails"}><Link to={"/cart"}>Ver carrito</Link></Button>
+          </>
+          }
+          {/* <button onClick={() => removeItem(item.id)}>Eliminar</button> */}
         </div>
 
       </div>

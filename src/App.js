@@ -1,5 +1,4 @@
 import './App.css';
-/* import NavBar from './components/NavBar/NavBar'; */
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemList/ItemListContainer';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
@@ -7,6 +6,7 @@ import ItemDetailContainer from './components/ItemList/ItemDetailContainer';
 import { CartContextProvider } from './context/cartContext';
 import CartView from './components/CartView/CartView';
 import FirebaseApp from './services/firebase';
+import ThankYou from './components/TrankYou/ThankYou';
 
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <CartContextProvider>
-
         <BrowserRouter>
             <NavBar/>
             <Routes>
@@ -38,7 +37,12 @@ function App() {
               <Route 
                 path='/cart' 
                 element={<CartView/>} />
-              
+
+
+              <Route 
+                path='/thankyou/:orderId' 
+                element={<ThankYou/>} />
+
               <Route path="*" element={<h4>Error 404 xdn't</h4>}/>
 
 
