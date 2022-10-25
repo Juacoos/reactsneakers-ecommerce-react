@@ -1,0 +1,83 @@
+/* CART VIEW */
+.cartViewContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.cartViewCBox{
+
+  width: 70%;
+  padding: 16px;
+  margin-top: 30px;
+  background-color: white;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  border-radius: 2px;
+}
+.cartItem{
+  display: flex;
+  height: 150px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.cartContainerImg{
+  max-height: 150px;
+  max-width: 150px;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cartItemImg{
+  width: 100%;
+  transition: all 300ms;
+}
+.cartItemImg:hover{
+  transform: scale(1.1);
+
+}
+.cartDetailFlex{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.cartContainerItemDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  padding: 10px;
+
+  
+}
+.cartItemBtn{
+  width: 100px;
+}
+.countYPrice{
+  display: flex;
+  width: 100%;
+  margin: 0 10px;
+}
+.cartCountYPriceContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 100%;
+
+}
+
+.price{
+  font-size: 1.5rem;
+  font-weight:500;
+}
+
+/* TOTAL PRICE */
+.btnClearYPrice{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*  */

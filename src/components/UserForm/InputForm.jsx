@@ -1,10 +1,18 @@
 import React from 'react';
+import './InputForm.css';
 
 export default function InputForm(props){
   return (
-    <div style={{ display: "flex", marginBottom: 8 }}>
-      <label style={{  width: "100px",marginRight: 4 }}>{props.title}</label>
-      <input value={props.value} required={props.required} name={props.name} type="text" onChange={props.onChange} />
+    <div className='inputContainer'>
+      <label className='label'>{props.title}</label>
+      <input 
+        className='input'
+        value={props.value} 
+        required={props.required} 
+        name={props.name} 
+        type="text" 
+        onChange={props.onChange} 
+        placeholder={props.placeholder} />
     </div>
   )
 }

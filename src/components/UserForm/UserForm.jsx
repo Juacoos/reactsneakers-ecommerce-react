@@ -6,6 +6,7 @@ import { cartContext } from '../../context/cartContext'
 
 import Swal from 'sweetalert2'
 import { useContext } from "react";
+import './UserForm.css'
 
 export default function UserForm({ cart, getTotalPrice }) {
   const navigate = useNavigate();
@@ -52,13 +53,19 @@ export default function UserForm({ cart, getTotalPrice }) {
   
 
   return (   
-      <form onSubmit={onSubmit}>
-          <InputForm value={userData.name} title="Nombre" name="name" required={true} onChange={onInputChange}/>
-          <InputForm value={userData.email}  title="Email" name="email" required={true} onChange={onInputChange}/>
-          <InputForm value={userData.phone}  title="Teléfono" name="phone" onChange={onInputChange}/>    
+    <div className="formContainer">
+      <div class="formulario__texto">
+        <h3 class="formulario__titulo">Ingresá tus datos para realizar la compra!</h3>
+      </div>
+
+      <form className="form" onSubmit={onSubmit}>
+          <InputForm value={userData.name} title="Nombre" name="name" required={true} placeholder={"Nombre"} onChange={onInputChange}/>
+          <InputForm value={userData.email}  title="Email" name="email" required={true} placeholder={"Email"} onChange={onInputChange}/>
+          <InputForm value={userData.phone}  title="Teléfono" name="phone" placeholder={"Teléfono"} onChange={onInputChange}/>    
           <button  type="submit">
             Crear orden
           </button>
       </form>
-  );
+    </div>
+    );
 }
