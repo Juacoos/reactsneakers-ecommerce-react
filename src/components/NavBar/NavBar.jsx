@@ -37,8 +37,6 @@ function NavBar() {
               <ButtonNav  nombreNav={'Productos'} direccion={"/"} />
               <ButtonNav  nombreNav={'Deportivo'} direccion={"/category/deportivo"} />
               <ButtonNav  nombreNav={'Urbano'} direccion={"/category/urbano"} />
-
-              <ButtonNav  nombreNav={'Contacto'} direccion={"#"} />
             </ul>
           </div>
           <CartWidget/>

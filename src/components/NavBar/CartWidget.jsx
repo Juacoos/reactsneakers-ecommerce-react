@@ -16,8 +16,10 @@ function CartWidget() {
       <Link to="/cart">
         <FaShoppingCart size={25} />
         <span> 
-          {
-            getTotalItemCount() > 0 && getTotalItemCount()
+          { 
+            getTotalItemCount() > 0 ? 
+            getTotalItemCount() > 9 ? "+9" : getTotalItemCount()
+            : <></> 
           }
         </span>
       </Link>

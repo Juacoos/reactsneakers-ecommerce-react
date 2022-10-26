@@ -7,6 +7,7 @@ import UserForm from '../UserForm/UserForm';
 import './CartView.css';
 import Button from '../ItemList/Button';
 import '../ItemList/Button.css'
+import { useState } from 'react';
 // ES6 Modules or TypeScript
 
 
@@ -15,7 +16,10 @@ import '../ItemList/Button.css'
 function CartView() {
   const { cart, removeItem, clearCart, getTotalPrice } = useContext(cartContext);
 
-
+  const [formActivo, setFormActivo] = useState(false);
+  const handleForm = () => {
+    setFormActivo(true);
+  }
   return (
     <div className='cartViewContainer'>
       <div className='cartViewCBox'>
@@ -63,7 +67,7 @@ function CartView() {
             <h2 className='totalPrice'>Precio total: $ {getTotalPrice()}</h2>
             <Button onClick={() => clearCart()} claseBtn={"btnDetails"}>Vaciar carrito</Button>
           </div>
-          
+          <Button onClick={handleForm} claseBtn={"btnDetails btnComprar"} >Realizar compra</Button>
         </>
         :
         <>
@@ -75,7 +79,7 @@ function CartView() {
 
       </div>
       {
-        cart.length ? 
+        formActivo && cart.length ? 
         <UserForm cart={cart} getTotalPrice={getTotalPrice} />
         :
         <></>

@@ -1,0 +1,18 @@
+.footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+.columna{
+  display: flex;
+  flex-direction: column;
+}
+.link{
+  color: white;
+}
+.rrss{
+  display: flex;
+  flex-direction: column;
+}

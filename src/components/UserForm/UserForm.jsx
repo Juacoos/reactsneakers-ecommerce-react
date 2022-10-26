@@ -7,6 +7,7 @@ import { cartContext } from '../../context/cartContext'
 import Swal from 'sweetalert2'
 import { useContext } from "react";
 import './UserForm.css'
+import Button from "../ItemList/Button";
 
 export default function UserForm({ cart, getTotalPrice }) {
   const navigate = useNavigate();
@@ -62,9 +63,12 @@ export default function UserForm({ cart, getTotalPrice }) {
           <InputForm value={userData.name} title="Nombre" name="name" required={true} placeholder={"Nombre"} onChange={onInputChange}/>
           <InputForm value={userData.email}  title="Email" name="email" required={true} placeholder={"Email"} onChange={onInputChange}/>
           <InputForm value={userData.phone}  title="Teléfono" name="phone" placeholder={"Teléfono"} onChange={onInputChange}/>    
-          <button  type="submit">
+          {/* <button  type="submit">
             Crear orden
-          </button>
+          </button> */}
+          <div className="btnFormCont">
+            <Button claseBtn={"btnComprar btnForm"} type={"submit"}>Crear orden</Button>
+          </div>
       </form>
     </div>
     );

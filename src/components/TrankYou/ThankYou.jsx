@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import { getOrder } from '../../services/firebase';
+import Loader from '../Loader/Loader';
+import '../CartView/CartView.css';
+import './ThankYou.css';
 
 function ThankYou() {
 
@@ -22,30 +25,74 @@ function ThankYou() {
   console.log(order)
 
   return (
-    <>
-    { order.buyerData ?
+    <div className='cartViewContainer'>
+    {
+      order ?
+      <>
       
-    <div>
-      <h2>Gracias por tu compra!</h2>
-      <h3>Detalles de tu compra</h3>
-      <p>ID de compra {order.id}</p>
-      {
-        order.cart.map((prod) =>{
-          return (<>
-            <p>{prod.title}</p>
-            <p>{prod.price}</p>
-          </>)
-        })
+      { order.buyerData ?
+        
+      <div className='cartViewCBox cartCBTx'>
+        <h2 className='titleTx'>Gracias por tu compra, {order.buyerData.name.split(' ')[0]}!</h2> {/* Aquí hago el split para que muestre el primer nombre en el saludo*/}
+        <h3>Detalles de tu compra</h3>
+        <p>ID de compra <span className='bold'>{order.id}</span></p>
+  
+        <h4 className='prodTx'>Detalle de productos</h4>
+        {
+            order.cart.map((item)=>{
+              return (
+                <div className='cartItem'>
+                  <div className='cartContainerImg'>
+                    <img src={item.img} alt={`imagen de ${item.title}`} className='cartItemImg'/>
+                  </div>
+  
+                  <div className='cartDetailFlex'>
+                  
+                    <div className='cartContainerItemDetails'>
+                      <div className="containerDetails">
+                        <h2 className='cartItemTitle'>{item.title}</h2>
+                        <h4>{item.detail}</h4>
+                      </div>
+                      <div className='containerBtn'>
+                        {/* aca iba el boton de eliminar por eso no lo hice un componente */}
+                      </div>
+                    </div>
+  
+                    <div className='countYPrice'>
+                      <div className='cartCountYPriceContainer'>
+                        <p className='cartItemCount'>Cantidad {item.count}</p>
+                      </div>
+  
+                      <div className='cartCountYPriceContainer'>
+                        <p className='price'>$ {item.price}</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                    
+                </div>
+              )
+            })
+          }
+        <h2 className='totalPrice totalTx'>Precio total: $ {order.total}</h2>
+        
+        <h3>Detalles de comprador</h3>
+        <p>{order.buyerData.name}</p>
+        <p>{order.buyerData.email}</p>
+        <p>{order.buyerData.phone}</p>
+      </div>
+      :
+      <>
+        <Loader/>
+      </>
       }
-      <h3>Detalles de comprador</h3>
-      <p>{order.buyerData.name} {order.buyerData.email}</p>
-    </div>
-    :
-    <>
-      No se encontró pedido
-    </>
+      </>
+      :
+      <>
+      no se encontro pedido
+      </>
     }
-    </>
+    </div>
   )
 }
 

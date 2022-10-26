@@ -7,6 +7,7 @@ import { CartContextProvider } from './context/cartContext';
 import CartView from './components/CartView/CartView';
 import FirebaseApp from './services/firebase';
 import ThankYou from './components/TrankYou/ThankYou';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
 
 
             </Routes>
+            <Footer/>
         </BrowserRouter>
 
       </CartContextProvider>

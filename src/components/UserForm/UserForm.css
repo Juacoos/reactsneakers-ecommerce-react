@@ -20,3 +20,13 @@
   padding: 16px;
   width: 100%;
 }
+.btnFormCont{
+  display: flex;
+  justify-content: end;
+}
+.btnForm{
+  width: 100%;
+  padding: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
