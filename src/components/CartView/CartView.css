@@ -2,15 +2,14 @@
 .cartViewContainer{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
+  min-height: 100vh;
 }
 .cartViewCBox{
 
   width: 70%;
   padding: 16px;
-  margin-top: 30px;
+  margin: 30px 0;
   background-color: white;
   box-shadow: 0 0 2px rgba(0,0,0,0.5);
   border-radius: 2px;
@@ -54,6 +53,9 @@
 .cartItemBtn{
   width: 100px;
 }
+.btnMargin0{
+  margin: 0 !important;
+}
 .countYPrice{
   display: flex;
   width: 100%;
@@ -81,3 +83,7 @@
 
 
 /*  */
+
+.btnCart{
+  margin: 10px 0;
+}

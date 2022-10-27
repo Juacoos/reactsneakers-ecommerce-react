@@ -15,9 +15,17 @@ function Footer() {
       </div>
       <div className='rrss'>
         <h3>Seguinos en nuestras redes</h3>
-        <a href="https://instagram.com" className='link'><FaInstagramSquare size={20}/> Instagram</a>
-        <a href="https://twitter.com" className='link'><AiFillTwitterSquare size={20}/> Twitter</a>
-        <a href="https://github.com/Juacoos/reactsneakers-ecommerce-react" className='link'><FaGithubSquare size={20}/> Github</a>
+        <a href="https://instagram.com" className='link'>
+          <FaInstagramSquare size={20} className='iconRS'/> Instagram
+        </a>
+        <a href="https://twitter.com" className='link'>
+
+          <AiFillTwitterSquare size={20} className='iconRS'/> Twitter
+
+        </a>
+        <a href="https://github.com/Juacoos/reactsneakers-ecommerce-react" className='link'>
+          <FaGithubSquare size={20} className='iconRS'/> Github
+        </a>
       </div>
     </div>
   )

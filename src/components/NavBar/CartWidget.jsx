@@ -5,9 +5,6 @@ import { cartContext } from '../../context/cartContext';
 
 function CartWidget() {
 
-  // const cart = useContext(cartContext).cart;
-  // == 
-
   const {getTotalItemCount} = useContext(cartContext);
 
 

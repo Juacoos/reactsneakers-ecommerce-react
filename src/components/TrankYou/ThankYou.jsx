@@ -5,6 +5,7 @@ import { getOrder } from '../../services/firebase';
 import Loader from '../Loader/Loader';
 import '../CartView/CartView.css';
 import './ThankYou.css';
+import { ItemsCart } from '../CartView/CartView';
 
 function ThankYou() {
 
@@ -20,9 +21,11 @@ function ThankYou() {
     })
     .catch( (error) =>{
       setFeedbackMsg(error.message);
+      console.log("error " , error.message)
     })
-  },[])
-  console.log(order)
+  },[orderId])
+  console.log("orden: " , order)
+  console.log(feedbackMsg)
 
   return (
     <div className='cartViewContainer'>
@@ -41,36 +44,8 @@ function ThankYou() {
         {
             order.cart.map((item)=>{
               return (
-                <div className='cartItem'>
-                  <div className='cartContainerImg'>
-                    <img src={item.img} alt={`imagen de ${item.title}`} className='cartItemImg'/>
-                  </div>
-  
-                  <div className='cartDetailFlex'>
-                  
-                    <div className='cartContainerItemDetails'>
-                      <div className="containerDetails">
-                        <h2 className='cartItemTitle'>{item.title}</h2>
-                        <h4>{item.detail}</h4>
-                      </div>
-                      <div className='containerBtn'>
-                        {/* aca iba el boton de eliminar por eso no lo hice un componente */}
-                      </div>
-                    </div>
-  
-                    <div className='countYPrice'>
-                      <div className='cartCountYPriceContainer'>
-                        <p className='cartItemCount'>Cantidad {item.count}</p>
-                      </div>
-  
-                      <div className='cartCountYPriceContainer'>
-                        <p className='price'>$ {item.price}</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                    
-                </div>
+                <ItemsCart item={item}/>
+                
               )
             })
           }
@@ -89,7 +64,7 @@ function ThankYou() {
       </>
       :
       <>
-      no se encontro pedido
+      No se encontro pedido
       </>
     }
     </div>

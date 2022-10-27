@@ -54,22 +54,24 @@ export default function UserForm({ cart, getTotalPrice }) {
   
 
   return (   
-    <div className="formContainer">
-      <div class="formulario__texto">
-        <h3 class="formulario__titulo">Ingresá tus datos para realizar la compra!</h3>
-      </div>
+    <div className="formContUpper">
+      <div className="formContainer">
+        <div class="formulario__texto">
+          <h3 class="formulario__titulo">Ingresá tus datos para realizar la compra!</h3>
+        </div>
 
-      <form className="form" onSubmit={onSubmit}>
-          <InputForm value={userData.name} title="Nombre" name="name" required={true} placeholder={"Nombre"} onChange={onInputChange}/>
-          <InputForm value={userData.email}  title="Email" name="email" required={true} placeholder={"Email"} onChange={onInputChange}/>
-          <InputForm value={userData.phone}  title="Teléfono" name="phone" placeholder={"Teléfono"} onChange={onInputChange}/>    
-          {/* <button  type="submit">
-            Crear orden
-          </button> */}
-          <div className="btnFormCont">
-            <Button claseBtn={"btnComprar btnForm"} type={"submit"}>Crear orden</Button>
-          </div>
-      </form>
+        <form className="form" onSubmit={onSubmit}>
+            <InputForm value={userData.name} title="Nombre" name="name" required={true} placeholder={"Nombre"} onChange={onInputChange}/>
+            <InputForm value={userData.email}  title="Email" name="email" required={true} placeholder={"Email"} onChange={onInputChange}/>
+            <InputForm value={userData.phone}  title="Teléfono" name="phone" placeholder={"Teléfono"} onChange={onInputChange}/>    
+            {/* <button  type="submit">
+              Crear orden
+            </button> */}
+            <div className="btnFormCont">
+              <Button claseBtn={"btnComprar btnForm"} type={"submit"}>Crear orden</Button>
+            </div>
+        </form>
+      </div>
     </div>
     );
 }

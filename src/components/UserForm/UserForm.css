@@ -1,8 +1,11 @@
+.formContUpper{
+  display: flex;
+  justify-content: center;
+}
 .formContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   width: 500px;
   margin: 30px 0;
   background-color: white;
@@ -22,11 +25,11 @@
 }
 .btnFormCont{
   display: flex;
-  justify-content: end;
 }
 .btnForm{
   width: 100%;
   padding: 5px 0;
+  
   border-radius: 4px;
   cursor: pointer;
 }

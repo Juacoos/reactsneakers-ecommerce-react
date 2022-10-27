@@ -4,7 +4,7 @@ import ItemListContainer from './components/ItemList/ItemListContainer';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import ItemDetailContainer from './components/ItemList/ItemDetailContainer';
 import { CartContextProvider } from './context/cartContext';
-import CartView from './components/CartView/CartView';
+import { CartView } from './components/CartView/CartView';
 import FirebaseApp from './services/firebase';
 import ThankYou from './components/TrankYou/ThankYou';
 import Footer from './components/Footer/Footer';
