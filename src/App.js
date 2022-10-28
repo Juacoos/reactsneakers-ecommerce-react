@@ -8,7 +8,9 @@ import { CartView } from './components/CartView/CartView';
 import FirebaseApp from './services/firebase';
 import ThankYou from './components/TrankYou/ThankYou';
 import Footer from './components/Footer/Footer';
-import Carousel from './components/Carousel/Carousel';
+import LazyLoad from './components/Carousel/CarouselS';
+//import Carousel from './components/Carousel/Carousel';
+
 
 
 function App() {
@@ -40,7 +42,8 @@ function App() {
               <Route path='/' 
                 element={
                   <>
-                    <Carousel images={images} autoplay={true} dots={true} />
+                    <LazyLoad images={images} />
+                    {/* <Carousel images={images} autoplay={true} dots={true} /> */}
                     <ItemListContainer
                     greeting={"Bienvenido! Aquí están los productos"}/>
                   </>
