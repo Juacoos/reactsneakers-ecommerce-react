@@ -48,6 +48,8 @@ export default function UserForm({ cart, getTotalPrice }) {
       }).then((result) => {
         navigate(`/thankyou/${respuesta}`);
       });
+      //Importante acá el clearCart
+      clearCart();
     });
   }
 

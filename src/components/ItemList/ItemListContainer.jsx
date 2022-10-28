@@ -32,22 +32,27 @@ function ItemListContainer(props) {
     }
   }, [categoryID])
 
+
+
   return (
     <div className='itemListContainer'>
-      
-      <h2>{props.greeting}</h2>
-      
-      
+
+      <h2 className='greeting'>{props.greeting}</h2>
+
+
+      {categoryID && <h3 id='catID'>Productos de la categoría {`${categoryID}`}</h3>}
+
       <div className={!isLoading && "productos"}> {/* Aca uso el condicional porque con el grid el loader se ve mal */}
         { 
           isLoading ?
           <Loader/>
           :
-          <ItemList datosList={datosList}/>
+          <>
+            
+            <ItemList datosList={datosList}/>
+          </>
         }
-        
       </div>
-      
     </div>
   )
 }

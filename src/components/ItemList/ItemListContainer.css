@@ -1,7 +1,9 @@
 .itemListContainer{
-  min-height: 100vh;
-  margin-top: 40px;
+  min-height: 80vh;
   text-align: center;
+}
+.greeting{
+  margin-top: 10px;
 }
 .productos{
   display: grid;
