@@ -4,6 +4,7 @@
 	overflow: hidden;
 	position: relative;
 }
+
 .slider__content,
 .slider__content--item {
 	width: 100%;
@@ -52,4 +53,8 @@
   .slider__content--item:hover .slider-description {
     background-color: rgba(0,0,0,0.7);
     
+  }
+
+  .slick-dots{
+    bottom: 0 !important;
   }
