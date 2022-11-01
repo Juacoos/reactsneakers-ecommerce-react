@@ -31,6 +31,7 @@ export default function MultipleItems(){
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 1,
+    className: 'multi',
     responsive: [
       {
         breakpoint: 1024,
@@ -60,7 +61,7 @@ export default function MultipleItems(){
   };
 
   return (
-    <div >
+    <div className="offers">
       <h2 className="offerTitle">OFERTAS!</h2>
       <Slider {...settings}>
         {

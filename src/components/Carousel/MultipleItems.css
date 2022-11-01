@@ -1,3 +1,7 @@
+.offers{
+  height: 400px !important;
+  margin-bottom: 20px;
+}
 .offerTitle{
   text-align: center;
   padding: 10px 0;
@@ -40,3 +44,6 @@
   /* width: 200px !important; */
 }
 
+.slick-dots{
+  bottom: -10px !important;
+}
