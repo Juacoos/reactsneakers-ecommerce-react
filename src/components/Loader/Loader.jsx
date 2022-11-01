@@ -11,10 +11,8 @@ function Loader() {
       lineWeight={5}
       speed={2} 
       color="#00bbf9" 
-      
       />
     </div>
-
   )
 }
 

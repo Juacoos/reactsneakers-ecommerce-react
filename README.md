@@ -1,3 +1,26 @@
+# ReactSneakers - Ecommerce hecho con React.JS
+
+### Mi nombre es Carlos Joaquin Rodriguez, desarrollador de ReactSneakers como proyecto final de mi curso de React.JS de CoderHouse
+
+Este proyecto se basa en un ecommerce simple de zapatillas
+
+Imagenes de muestra:
+
+![ecc1](https://user-images.githubusercontent.com/90065989/199239460-6d84c68d-e8b9-44fa-b1ad-729ba9a2d3db.png)
+![ecc2](https://user-images.githubusercontent.com/90065989/199239958-68b552bd-2212-48dc-8473-30fd9c427d90.png)
+![ECC3](https://user-images.githubusercontent.com/90065989/199239998-693bd2ea-130e-45f2-8ea8-60b5aa21b9a1.png)
+
+#### Link al deploy: https://react-sneakers-cjr.netlify.app/
+
+Comentarios propios:
+Tengo algunas cosas que me gustaría agregarle, pero hasta ahora lo que he hecho me ha llevado bastante tiempo por lo que iré agregandolé algunas cosas de a poco.
+
+#### Muchas gracias por ver mi proyecto ReactSneakers, espero que te haya gustado!
+
+#### Link a mi LinkedIn: https://www.linkedin.com/in/cjoaquinrodriguez/
+
+Readme de React:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

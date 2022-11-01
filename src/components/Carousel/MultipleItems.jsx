@@ -11,7 +11,6 @@ export default function MultipleItems(){
   const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
-    
     setDatosList([]);
     getOfferProduct().then((data) => { 
       console.log(data)
@@ -57,7 +56,6 @@ export default function MultipleItems(){
       }
     ]
   };
-
   
   return (
 
@@ -65,11 +63,10 @@ export default function MultipleItems(){
       <h2 className="offerTitle">OFERTAS!</h2>
     {
       isLoading ? 
-
         <Loader/>
 
       :
-      
+
       <Slider {...settings}>
         {
           datosList.map((item) => {
@@ -90,10 +87,7 @@ export default function MultipleItems(){
         }
       </Slider>
     }
-    </div>
-
-    
+    </div>    
   );
-
 }
 
