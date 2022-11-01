@@ -34,16 +34,19 @@
 }
 
 .detailsItem{
+
   width: 100%;
   padding: 10px;
 }
-
+.textMulti{
+  text-align: center;
+}
 .slick-slide  {
   display: flex !important;
   justify-content: center !important;
   /* width: 200px !important; */
 }
 
-.slick-dots{
+/* .slick-dots{
   bottom: -10px !important;
-}
+} */
