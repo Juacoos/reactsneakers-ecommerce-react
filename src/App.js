@@ -9,7 +9,7 @@ import FirebaseApp from './services/firebase';
 import ThankYou from './components/TrankYou/ThankYou';
 import Footer from './components/Footer/Footer';
 import LazyLoad from './components/Carousel/CarouselS';
-
+import MultipleItems from './components/Carousel/MultipleItems';
 
 
 function App() {
@@ -43,6 +43,7 @@ function App() {
                     <LazyLoad images={images} />
                     <ItemListContainer
                     greeting={"Bienvenido! Aquí están los productos"}/>
+                    <MultipleItems/>
                   </>
                   }
                 />
@@ -51,16 +52,20 @@ function App() {
               <Route path='/category/:categoryID' 
                 element={
                   <>
-
-                    
                     <ItemListContainer/>
+                    <MultipleItems/>
                   </>}
                   />
 
                   {/* Detalle de producto */}
               <Route 
                 path='/producto/:itemID' 
-                element={<ItemDetailContainer/>}/>
+                element={
+                <>
+                  <ItemDetailContainer/>
+                  <MultipleItems/>
+                </>
+                }/>
                 
               
               <Route 

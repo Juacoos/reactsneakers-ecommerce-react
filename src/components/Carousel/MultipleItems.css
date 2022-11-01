@@ -1,0 +1,42 @@
+.offerTitle{
+  text-align: center;
+  padding: 10px 0;
+}
+.cardMulti{
+  background-color: white;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  margin: 0 30px;
+  width: 250px !important;
+  border-radius: 5px;
+  border: 1px solid white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.imgContainerMulti{
+  width: 250px;
+  border-bottom: 1px solid lightgray;
+  overflow: hidden;
+}
+.imgMulti{
+  width: 250px;
+  height: 250px;
+  transition: all 300ms;
+}
+
+.imgMulti:hover{
+  transform: scale(1.1);
+}
+
+.detailsItem{
+  width: 100%;
+  padding: 10px;
+}
+
+.slick-slide  {
+  display: flex !important;
+  justify-content: center !important;
+  /* width: 200px !important; */
+}
+
